@@ -51,5 +51,5 @@ install:
 	install $(E) $(PREFIX)/bin
 
 clean:
-	rm -rf $(O) $(L) $(E)
+	rm -rf $(O) $(E)
 
