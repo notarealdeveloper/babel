@@ -42,7 +42,7 @@ main:
 	gcc $(WARNINGS) -c -o $(O)/main.o $(SRC)/main.c
 
 link:
-	ld -o $(E) -L$(L) -rpath $(L) -dynamic-linker $(INTERPRETER) $(LIBS) $(C_RUNTIME) $(O)/main.o
+	ld -o $(E) -L$(PWD)/$(L) -rpath $(PWD)/$(L) -dynamic-linker $(INTERPRETER) $(LIBS) $(C_RUNTIME) $(O)/main.o
 	@printf "You can now run %s\n" ./$(E)
 
 install:
