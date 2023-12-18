@@ -46,9 +46,14 @@ link:
 	@printf "You can now run %s\n" ./$(E)
 
 install:
+	# TODO: install shared libraries into $(PREFIX)/lib.
+	# The current setup is a sort of "editable install for binaries",
+	# but only halfway there.
 	@echo PREFIX is $(PREFIX)
 	install -d   $(PREFIX)/bin
 	install $(E) $(PREFIX)/bin
+
+develop: default install
 
 clean:
 	rm -rf $(O) $(E)
