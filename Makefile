@@ -53,3 +53,5 @@ install:
 clean:
 	rm -rf $(O) $(E)
 
+check:
+	pytest -v tests
