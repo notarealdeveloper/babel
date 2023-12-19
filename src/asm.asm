@@ -11,7 +11,7 @@ section .data
 message: db "asm_function: got "
 integer: db "?"
 newline: db 0x0a, 0x00
-message_len equ $-message
+message_len equ $-message-1
 
 section .text
 global asm_function:function
